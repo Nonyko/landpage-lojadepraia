@@ -19,7 +19,7 @@ body{
  height: 4rem;
 
 }
-.navbar-white a{
+ .navbar-white .item-selectable .colorgray{
     color: #828282 !important;
 }
 .item-selectable:hover > a:first-child{
@@ -36,6 +36,11 @@ body{
     background-color: rgba(235, 95, 61,0.8);
     border:none;
     color: white !important;
+}
+
+.dropdown-menu .dropdown-item{
+    color: white !important;
+    background-color: transparent;
 }
 
 .dropdown-toggle:after{
@@ -86,13 +91,78 @@ body{
     color:  white !important; 
 } 
   
-.input-transparent[type="email"]:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+.input-transparent:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
     color:  white !important;
 } 
   
-.input-transparent[type="email"]::-ms-input-placeholder { /* Microsoft Edge */ 
+.input-transparent::-ms-input-placeholder { /* Microsoft Edge */ 
     color:  white !important;
 } 
+
+.navbar #cartButton:hover{
+    cursor: pointer;
+}
+
+#cart{
+    color: white !important;
+    font-size: 0.9rem;
+    display: none;
+}
+
+#cart .table-responsive{
+    padding: 1rem;
+    display: none;
+}
+
+#cart .table-responsive span.shrink{
+    font-size: 0.7rem;
+    padding-right: 0.5rem;
+
+}
+
+#cart .table-responsive button{
+    border: 1px solid white;
+    background-color: transparent;
+    color: white; 
+    padding: 0.5rem;
+    width: 100%;
+}
+
+#cart table{
+    color: white;
+    font-size: 1rem;
+}
+
+#cart table th {
+    border: none !important;
+}
+
+#cart table td {
+    border: none !important;
+}
+
+#cart table td b{
+    white-space: nowrap;
+}
+
+#cart table td div{
+    height: 5rem;
+}
+
+#cart > div{
+    max-width: 30rem;
+    background-color: rgba(235,95,61, 0.8); 
+}
+
+#cart div#cartProductImg{
+}
+
+#cart img{
+    max-height: 100%;
+    margin: auto;
+    padding-right: 0.2rem;
+}
+
 #banner-principal h1{
     font-size: 40px;
 }
