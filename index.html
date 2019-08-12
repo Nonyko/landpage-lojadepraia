@@ -7,8 +7,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<!-- Popper JS -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!--Slick js-->
@@ -21,8 +20,7 @@
 <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
 <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
 	
-<!-- Nunito font import -->
-<link href="https://fonts.googleapis.com/css?family=Nunito:200&display=swap" rel="stylesheet">
+
 <!-- Custom CSS -->
 <link rel="stylesheet" href="css/style.css">
 <!-- Custom Scripts -->
@@ -30,34 +28,27 @@
 
 </head>
 <body>
-        <nav id="navbar" class="navbar navbar-expand-lg position-absolute sticky-top w-100 px-5 ">
-                    
-                <a id="brand-transparent" class="navbar-brand" href="#"><img src="img/logobranco.png"/></a>
-                <a id="brand-white" class="navbar-brand" href="#"><img src="img/logocinza.png"/></a>
-                <button style="z-index: 2;" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span><i class="fas fa-bars text-white"></i></span>
-                </button>
+        <div id="box-navbar" class="position-absolute sticky-top w-100">
+        <nav id="navbar" class="navbar navbar-expand-lg mx-auto w-100 px-5">
+            <div class="container">
+                <div class="navbar-brand w-100">
+                    <a href="#">
+                        <img id="brand-white" src="img/icons/icon_03.png" />       
+                        <img id="brand-gray" class="d-none" src="img/icons/icon_hover_03.png"/>                                          
+                    </a>
+                </div>    
+                
+                    <button style="background-color: white;" id="burguer-btn" class="navbar-toggler" type="button" data-toggle="collapse" data-target=".collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="text-black"><i class="fas fa-bars"></i></span>
+                    </button>
+                
+                
               
                 <div class="collapse navbar-collapse mx-auto" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto  ">
-                        <li class="nav-item dropdown position-static item-selectable">
-                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="colorgray">BIQUÍNIS</span>
-                            </a>
-                            <div class="dropdown-menu w-100" aria-labelledby="navbarDropdown">
-                                <div class="row mx-auto">
-                                    <div class="col items-dropdown">
-                                        <a class="dropdown-item" href="#">Cortininhas</a>
-                                        <a class="dropdown-item" href="#">Croppeds</a>
-                                        <a class="dropdown-item" href="#">Tomara que caia</a>
-                                        <a class="dropdown-item" href="#">Lacinho</a>
-                                        <a class="dropdown-item" href="#">Calcinha Larguinha</a>
-                                        <a class="dropdown-item" href="#">Levanta bumbum</a>
-                                        <a class="dropdown-item" href="#">Trending</a>
-                                    </div>
-                                    
-                                </div>
-                            </div>
+                    <ul class="navbar-nav mx-auto w-100">                        
+                        
+                        <li class="nav-item item-selectable">
+                                <a class="nav-link" href="#"> <span class="colorgray">BIQUÍNIS</span></a>
                         </li>
                         <li class="nav-item item-selectable">
                                 <a class="nav-link" href="#"> <span class="colorgray">MAIÔS</span></a>
@@ -70,31 +61,67 @@
                         </li>
                         <li class="nav-item item-selectable">
                                 <a class="nav-link" href="#"><span class="colorgray">SALE</span></a>
-                        </li>                       
-                        
+                        </li>   
                     </ul>
-                    <ul class="navbar-nav ml-auto">
-                            <li id="busca" class="nav-item busca">
-                                <a class="nav-link " ><i id="abrirbusca" class="fas fa-search"></i><i id="fecharbusca" class="fas fa-window-close"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"><i id="cartButton" class="fas fa-shopping-bag"><span class="badge badge-pill badge-danger">9</span></i> </a>
-                            </li>
-                    </ul>                  
                 </div>
-            </nav>
-            <div id="searchbar"  class="fixed-top w-100 search-bar">
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="position-relative w-100">
-                        <input class="input-transparent" placeholder="Digite aqui o que procura">
-                        <button><i class="fas fa-search"></i></button>
+                    <div class="ml-auto w-100 collapse navbar-collapse">    
+                        <ul class="navbar-nav ml-auto">
+                                <li id="busca" class="nav-item busca">
+                                    <a class="nav-link " >
+                                        <img id="abrirbusca-white" src="img/icons/icon_06.png" />
+                                        <img id="fecharbusca-white" src="img/icons/icon-close-branco.png"/>
+                                        <img id="abrirbusca-black" src="img/icons/icon_hover_06.png" />
+                                        <img id="fecharbusca-black" src="img/icons/icon-close-preto.png"/>
+                                    </a>
+                                </li>
+                                <li class="nav-item user">
+                                    <a class="nav-link">
+                                        <img id="user-white" src="img/icons/icon_09.png" />
+                                        <img id="user-black" src="img/icons/icon_hover_09.png" class="d-none"/>
+                                    </a>
+                                </li>
+                                <li class="nav-item bag position-relative">
+                                    <a class="nav-link">
+                                        <img id="bag-white" src="img/icons/icon_11.png" />
+                                        <img id="bag-black" src="img/icons/icon_hover_11.png" class="d-none"/>
+                                        <img id="fecharbag-black" src="img/icons/icon-close-preto.png" style="background-color:white;"/>
+                                    </a>
+                                   
+                                    <div class="position-absolute" style="top:0; right: 0;">
+                                        <span class="badge badge-pill badge-danger">1</span>
+                                    </div>
+                                </li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div id="cart" style="color: black; margin-top: 5rem; display: none;" class="fixed-top d-none d-flex align-items-center justify-content-end px-5">
+                </nav>
+                <div>    
+                <div id="searchbar"  class="w-100 search-bar scale-in-ver-top position-absolute">
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <div class="position-relative w-100">
+                                <input class="input-transparent" placeholder="Digite aqui o que procura">
+                                <button><img src="img/icons/icon_06.png" /></button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- end searchbar -->   
+                <div id="userbox"  class="scale-in-ver-top w-100 position-absolute">
+                    <div class="container">
+                        <div class="d-flex align-items-center justify-content-end ">
+                            <div id="userlogin" class="position-relative text-center text-white">
+                                <p class="mb-0 font-weight-light">Olá, <b class="font-weight-bold">Você ainda não está logado</b></p>
+                                <hr/>                                
+                                <p class="mt-2 mb-0 font-weight-light small">Login/Cadastre-se</p>                                
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- end userbox -->   
+                <div id="cart-box" class="w-100 position-absolute">
+                <div class="container">
+                <div id="cart" class=" d-flex align-items-center justify-content-end scale-in-ver-top">
                     <div class="table-responsive">
                         <table class="table">
                             <tr>
@@ -137,6 +164,18 @@
                         </div>
                     </div>
                 </div>
+                </div>
+                </div>
+                <!-- end cart-box -->   
+                </div>
+                </div>
+                
+            
+            
+            
+            <!--end navbar box-->
+            
+
             <!-- end navbar -->
             
             
@@ -161,6 +200,12 @@
                         <p>SAIBA MAIS</p>
                     </div>
                 </div>
+                <div class="slidechild img1-banner">
+                    <div>
+                        <h1>OUTRO TESTE</h1>
+                        <p>SAIBA MAIS</p>
+                    </div>
+                </div>
             </div>
             <!-- slide-bannerprincipal -->      
 
@@ -168,18 +213,17 @@
         <!-- end banner-principal -->       
     </header>
     <content class="w-100">
-        <div id="swimwear-banners" class="px-5 d-flex justify-content-center align-items-center">
+        <div class="container">
+        <div id="swimwear-banners" class="d-flex justify-content-center align-items-center">
             <div class="row w-100">
                 <div class="swimwear-banners-inner col-lg-4 ">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/biquinipreto.png"/>
+                        <img class="img-fluid" src="img/banners/buiquine_um.jpg"/>
                         <div class="position-absolute ">
-                            <div class="d-flex w-100 h-100 justify-content-center align-items-center">
-                                <div>
+                            <div class="d-flex flex-column w-100 h-100 justify-content-center align-items-center ">                                
                                     <h1>SPORT</h1>
-                                    <hr/>
-                                    <p>VER PRODUTOS</p>
-                                </div>
+                                    <hr class="mb-2"/>
+                                    <p>VER PRODUTOS</p>                                
                             </div>
 
                         </div>
@@ -188,14 +232,12 @@
                 </div>
                 <div id="swimwear-banner-bodies" class=" swimwear-banners-inner  col-lg-4">
                     <div class="position-relative">
-                        <img class="img-fluid" src="img/maiovermelho.png"/>
+                        <img class="img-fluid" src="img/banners/buiquine_dois.jpg"/>
                         <div class="position-absolute ">
-                            <div class="d-flex w-100 h-100 justify-content-center align-items-center">
-                                <div>
+                            <div class="d-flex flex-column w-100 h-100 justify-content-center align-items-center">                                
                                     <h1>BODIES</h1>
-                                    <hr/>
-                                    <p>VER PRODUTOS</p>
-                                </div>
+                                    <hr class="mb-2"/>
+                                    <p>VER PRODUTOS</p>                                
                             </div>
 
                         </div>
@@ -204,14 +246,12 @@
                 </div>
                 <div id="swimwear-banner-biquinis" class=" swimwear-banners-inner col-lg-4" >  
                     <div class="position-relative">              
-                        <img class="img-fluid" src="img/biquinirosa.png"/>    
+                        <img class="img-fluid" src="img/banners/buiquine_tres.jpg"/>    
                         <div class="position-absolute ">
-                            <div class="d-flex w-100 h-100 justify-content-center align-items-center">
-                                <div>
+                            <div class="d-flex flex-column w-100 h-100 justify-content-center align-items-center">                                
                                     <h1>BIQUÍNIS</h1>
-                                    <hr/>
-                                    <p>VER PRODUTOS</p>
-                                </div>
+                                    <hr class="mb-2"/>
+                                    <p>VER PRODUTOS</p>                                
                             </div>
 
                         </div>     
@@ -220,20 +260,19 @@
                 </div>
             </div>
         </div>
+        </div>
         <!-- end swimwear-banners --> 
 
         <div id="banner-secondary">
+            
             <div class="d-flex px-5 text">
-                <div class="position-relative w-100">
-                        <div class="position-absolute text-white" style="bottom:12rem; right: 2rem;">
-                                <h1>Coleção Verão 18/19</h1>
-                                <p>CONFIRA</p>
-                        </div>
-                    
-                </div>
+               
             </div>  
+            
+               
             <div class="w-100 d-flex flexbox-slides">
-                    <div class="w-100 px-5">
+                    <div class="w-100">
+                    <div class="container">
                     <div class="position-relative w-100">
                             <div id="box-slides-vitrine" class="position-absolute w-100">
                                 <div id="slides-vitrine" class="slides-vitrine w-100">
@@ -245,7 +284,7 @@
                                                 <div class="vitrine-item-label">
                                                     <p>Bíquini Cortininha Palmeira</p>     
                                                     <p><b>R$ <span class="valor">200</span></b></p> 
-                                                    <div class="btn-comprar mt-5 mb-5">
+                                                    <div class="btn-comprar mt-4 mb-4">
                                                         <a class="px-5">COMPRAR</a>       
                                                     </div>
                                                 </div>
@@ -259,7 +298,7 @@
                                                 <div class="vitrine-item-label">
                                                     <p>Bíquini Cortininha Palmeira</p>     
                                                     <p><b>R$ <span class="valor">200</span></b></p>      
-                                                    <div class="btn-comprar mt-5 mb-5">
+                                                    <div class="btn-comprar mt-4 mb-4">
                                                         <a class="px-5">COMPRAR</a>       
                                                     </div>                                                                  
                                                 </div>
@@ -273,7 +312,7 @@
                                                 <div class="vitrine-item-label">
                                                     <p>Bíquini Cortininha Palmeira</p>     
                                                     <p><b>R$ <span class="valor">200</span></b></p>
-                                                    <div class="btn-comprar mt-5 mb-5">
+                                                    <div class="btn-comprar mt-4 mb-4">
                                                         <a class="px-5">COMPRAR</a>       
                                                     </div>                                                                         
                                                 </div>
@@ -287,7 +326,7 @@
                                                 <div class="vitrine-item-label">
                                                     <p>Bíquini Cortininha Palmeira</p>     
                                                     <p><b>R$ <span class="valor">70,00</span></b></p>
-                                                    <div class="btn-comprar mt-5 mb-5">
+                                                    <div class="btn-comprar mt-4 mb-4">
                                                         <a class="px-5">COMPRAR</a>       
                                                     </div>                                                                        
                                                 </div>
@@ -301,7 +340,7 @@
                                                 <div class="vitrine-item-label">
                                                     <p>Bíquini Cortininha Palmeira</p>     
                                                     <p><b>R$ <span class="valor">200,00</span></b></p>      
-                                                    <div class="btn-comprar mt-5 mb-5">
+                                                    <div class="btn-comprar mt-4 mb-4">
                                                         <a class="px-5">COMPRAR</a>       
                                                     </div>                                                                  
                                                 </div>
@@ -315,7 +354,7 @@
                                                     <div class="vitrine-item-label">
                                                         <p>Bíquini Cortininha Palmeira</p>     
                                                         <p><b>R$ <span class="valor">200</span></b></p> 
-                                                        <div class="btn-comprar mt-5 mb-5">
+                                                        <div class="btn-comprar mt-4 mb-4">
                                                             <a class="px-5">COMPRAR</a>       
                                                         </div>                                                                
                                                     </div>
@@ -327,7 +366,7 @@
                         </div>
                     </div>
             </div>
-            
+            </div>
 
 
         </div>
@@ -338,129 +377,105 @@
     </content>
     <footer>
         <div id="blue-grandient">
-            <div style="height:20rem;"></div>
-            <div class="row w-100 px-5   text-center">
-                <div class="col"><b>FRETE GRÁTIS</b> nas compras acima de R$500</div>
-                <div class="col"><b>7 DIAS</b> para devolução</div>
-                <div class="col"><b>3x SEM JUROS</b> parcele nos cartões de crédito</div>
+            <div class="container">
+            <div style="height:22rem;"></div>
+            <hr class="w-100"/>
+            <div class="row w-100   text-center">                
+                <div class="col-md-4"><b class="extrabold">FRETE GRÁTIS</b> nas compras acima de R$500</div>
+                <div class="col-md-4"><b class="extrabold">7 DIAS</b> para devolução</div>
+                <div class="col-md-4"><b class="extrabold">3x SEM JUROS</b> parcele nos cartões de crédito</div>
             </div>
-            <div class="row w-100 px-5" id="footer-mapsite">
-                <div class="col-md-2">
-                    <p>Sobre nós</p>
-                    <p>Fale Conosco</p>
-                    <p>Atacado</p>
+            <hr class="w-100"/>
+            <div class="row w-100" id="footer-mapsite">
+                <div class="col-md-2 pl-0">
+                    <p><a href="#">Sobre nós</a></p>
+                    <p><a href="#">Atacado</a></p>
                 </div>
                 <div class="col-md-2">
-                    <p>Dúvidas Frequentes</p>
-                    <p>Entregas e Prazos</p>
-                    <p>Trocas e Devoluções</p>
-                    <p>Política de Privacidade</p>
-                    <p>Formas de Pagamento</p>
-                    <p>Tabela de Medidas</p>
+                    <p><a href="#">Dúvidas Frequentes</a></p>
+                    <p><a href="#">Entregas e Prazos</a></p>
+                    <p><a href="#">Trocas e Devoluções</a></p>
+                    <p><a href="#">Formas de Pagamento</a></p>
                 </div>
                 <div class="col-md-2">
-                    <p>Entrar</p>
-                    <p>Minha conta</p>
-                    <p>Meus Pedidos</p>
-                    <p>Central de Atendimento</p>
+                    <p><a href="#">Entrar</a></p>
+                    <p><a href="#">Minha conta</a></p>
+                   <p><a href="#">Meus Pedidos</a></p>
                 </div>
                 <div class="col-md-1">
-                        <p>Biquínis</p>
-                        <p>Maiôs</p>
-                        <p>Bodies</p>
-                        <p>Saídas</p>
+                        <p><a href="#">Biquínis</a></p>
+                        <p><a href="#">Maiôs</a></p>
+                        <p><a href="#">Bodies</a></p>
+                        <p><a href="#">Saídas</a></p>
+                        <p><a href="#">Roupas</a></p>
+                        <p><a href="#">Sale</a></p>
                 </div>
                 <div class="col-md-3">
-                    <p><b>NEW</b> RECEBA PROMOÇÕES E NOVIDADES</p>
+                    <p><b class="extrabold">NEW</b> RECEBA PROMOÇÕES E NOVIDADES</p>
                     <div class="buttonInside">
                         <input class="text-white">
                         <button><i class="fas fa-angle-right text-white"></i></button>
                     </div>
                 </div>
-                <div class="col-md-2">
+                <div class="col-md-2 pr-0">
                     <div class="d-flex justify-content-end">
                         <i class="fab fa-instagram"></i>
                     </div>
                     
                 </div>
             </div>
-            
+            </div>
         </div>
         <!-- end blue-grandient --> 
-        <div id="white-footer-bar" class="row w-100 px-5">
-            <div class="col">
-                <div class="d-flex align-items-center">
+        <div class="container">
+        <div id="white-footer-bar" class="row w-100">
+            
+            <div class="col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
                     <img class="img-fluid"  src="img/logocinza-square.png" />                                         
                     <p>CNPJ 23.104.344/0001-46 Avenida São Paulo <br/>
                     1547 Zona 02 - Salas 1 e 2 Cianorte - PR</p>    
                     
                 </div>
             </div>
-            <div class="col">
-                <div class="d-flex align-items-center">
+            <div class="col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
                     <p>FORMA DE PAGAMENTO </p>
                     <img class="img-fluid"  src="img/flags.png" />
                 </div>
             </div>
-            <div class="col">
-                <div class="d-flex align-items-center">
+            <div class="col-md-3">
+                <div class="d-flex align-items-center justify-content-center h-100">
                     <p>SEGURANÇA </p>
                     <img class="img-fluid"  src="img/security.png" />
                 </div>
                 
             </div>
+            <div class="col-md-3">
+                    <div class="d-flex align-items-center justify-content-center h-100">
+                        <img class="img-fluid"  src="img/icons/1_oxua_home_3b_19.png" />
+                        <img class="img-fluid"  src="img/icons/1_oxua_home_3b_21.png" />
+                    </div>
+                    
+                </div>
+            
+            </div>
         </div>
     </footer>
+        <div id="box-btn-backtop" class="fixed-bottom w-100 d-none">
+            <div class="position-relative w-100">            
+                <div id="btn-backtop" class="d-flex flex-column justify-content-center align-items-center ">
+                    <i class="fas fa-angle-up"></i> 
+                    <div>                                              
+                        <p class="text-center small mb-0">VOLTAR AO TOPO</p>
+                    </div>                
+                </div>            
+            </div>
+        </div>
+    </div>
 </body>
 </html>
 
 <script type="text/javascript">
 
-var $navbar = $("#navbar");
-  var $brandtransparent = $("#brand-transparent");
-  var $brandwhite = $("#brand-white");
-  var $searchbar = $("#searchbar");
-  var $abrirbusca = $("#abrirbusca");
-  var $fecharbusca = $("#fecharbusca");
-  
-  
-  $(window).scroll(function() {
-  
-    if (this.pageYOffset >= 2) { 
-    
-      $navbar.removeClass("position-absolute");
-      $navbar.addClass("navbar-white");
-      $brandtransparent.hide();
-      $brandwhite.show();
-      $searchbar.css('margin-top',"4rem");
-    } else {
-      $navbar.addClass("position-absolute");
-      $navbar.removeClass("navbar-white");
-      $brandtransparent.show();
-      $brandwhite.hide();
-      $searchbar.css('margin-top',"6rem");
-    }
-  });
-
-  $("#busca").click(function(){
-    $searchbar.fadeToggle();
-    $abrirbusca.toggle();
-    $fecharbusca.toggle();
-    $('.input-transparent').val('');
-});
-
-$("#cartButton").click(function(){
-    console.log("teste togo");
-    $("#cart").toggle();
-    $(".table-responsive").fadeToggle();
-})
-
-$(".valor").each(function( index, value ) {
-    let valor = value.innerHTML.replace(',','.');
-    value.innerHTML = valor;
-    valor = (value.innerHTML * 0.25 )+ (value.innerHTML*1);
-    value.innerHTML = valor.toFixed(2);
-    valor = value.innerHTML.replace('.',',');
-    value.innerHTML = valor;
-});
 </script>

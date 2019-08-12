@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
 
 body{
     margin: 0px;
@@ -7,58 +8,54 @@ body{
 /* header starts */
 #navbar{
     z-index: 2;
+   /* height: 4rem;*/
+}
+#navbar ul img{
+    max-width: 1.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+#navbar .navbar-brand img{
+    z-index: 2;
 }
 #navbar a{
     color: white;
 }
-#brand-white{
-    display: none;
+.navbar{
+    padding:0px !important;
 }
 .navbar-white{
  background-color: white;
- height: 4rem;
-
+ transition: ease-in 0.2s;
 }
  .navbar-white .item-selectable .colorgray{
     color: #828282 !important;
 }
-.item-selectable:hover > a:first-child{
-    color:#eb5f3d !important;
-    transition: 0.2s;
+
+@media (max-width: 992px){
+    .collapse {
+        background-color: rgba(235, 95, 61,0.5);
+        color: white;
+        text-align: center;
+    }
 }
 
-.item-selectable:hover{    
-    background-color: white;
-    transition: 0.2s;
+#burguer-btn{
+    z-index: 2;
 }
 
-.dropdown-menu{
-    background-color: rgba(235, 95, 61,0.8);
-    border:none;
-    color: white !important;
-}
-
-.dropdown-menu .dropdown-item{
-    color: white !important;
-    background-color: transparent;
-}
-
-.dropdown-toggle:after{
-    content: none;
-}
 .busca:hover{
     cursor: pointer;
 }
-.search-bar{
-    margin-top: 6rem; 
+.search-bar{    
     z-index: 2;
     text-align: center;
     color: white !important;
-    padding: 1rem 1rem 1rem 1rem;
+    padding: 0.5rem;
     background-color: rgba(235, 95, 61,0.8);
     display:none;
 }
-#fecharbusca{
+#fecharbusca-white, #fecharbusca-black, #abrirbusca-black, #fecharbag-black{
     display: none;
 }
 .input-transparent{
@@ -70,6 +67,7 @@ body{
     border:none;outline:none;
     background-color: rgba(255,255,255,0.0);
     color: white !important;
+    font-style: italic !important;
 }
 
 #searchbar button{
@@ -89,29 +87,58 @@ body{
 
 .input-transparent::placeholder { /* Firefox, Chrome, Opera */ 
     color:  white !important; 
+    font-style: italic !important;
 } 
   
 .input-transparent:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
     color:  white !important;
+    font-style: italic !important;
 } 
   
 .input-transparent::-ms-input-placeholder { /* Microsoft Edge */ 
     color:  white !important;
+    font-style: italic !important;
 } 
 
 .navbar #cartButton:hover{
     cursor: pointer;
 }
+.user:hover{
+    cursor: pointer;
+}
+#userbox{
+    display: none;
+}
+#userlogin{
+    background-color: rgba(235, 95, 61,0.8);
+    padding: 0.8rem;
+    width:12rem;
+    font-size: 0.8rem;
+}
 
+#userlogin hr{
+    margin:0.05rem;
+    width:100%;
+    border-width: 0.1rem;
+    border-color: rgba(235, 95, 61,0.4);
+}
+.bag:hover{
+    cursor: pointer;
+}
+.badge{
+font-size: 0.5rem;
+}
+#cart-box{
+    display: none;
+}
 #cart{
     color: white !important;
     font-size: 0.9rem;
-    display: none;
+    z-index: 2;
 }
 
 #cart .table-responsive{
     padding: 1rem;
-    display: none;
 }
 
 #cart .table-responsive span.shrink{
@@ -154,8 +181,7 @@ body{
     background-color: rgba(235,95,61, 0.8); 
 }
 
-#cart div#cartProductImg{
-}
+
 
 #cart img{
     max-height: 100%;
@@ -163,28 +189,33 @@ body{
     padding-right: 0.2rem;
 }
 
+
+  
+
 #banner-principal h1{
     font-size: 40px;
+    font-weight: 200;
 }
 #banner-principal p{
     font-size: 12px;
+    letter-spacing: 0.2rem;
 }
 
 .img1-banner{
-    background-image: url(../img/banner-principal.png);
+    background-image: url(../img/banners/banner-home-um.jpg);
     background-position: center;
     background-size: cover;
 }
 
 #slide-bannerprincipal{
-    background-image: url(https://place-hold.it/1600x400);
+    
     align-items: center;
 }
 
 .slides  .slidechild{
     height: 100%;
     color: white;
-    min-height: 80vh;
+    min-height: 90vh;
     display: flex; 
     align-items: center;
     justify-content: center;
@@ -204,12 +235,26 @@ body{
     bottom: 0px;  
     left: 0px; 
   }
-
+  .slick-dots li
+  {
+      margin: 0;  
+  }
 .slick-dots li button:before
 {
-    font-size: 0.5rem;
-    line-height: 0.7rem;
+    font-size: 0.6rem;
+    line-height: 0.6rem;  
+    
+    
 }
+
+.slick-dots li button:before {
+    color: white !important;
+    opacity: 1 !important;
+}
+.slick-dots li.slick-active button:before {
+    color:orangered !important;
+}
+
 
 /* header ends */
 
@@ -217,6 +262,7 @@ body{
 #swimwear-banners{
     padding: 0px;
     margin: 0px;
+    
 }
 
 #swimwear-banners *{
@@ -249,31 +295,35 @@ body{
     height: 100%;
     width: 100%;
     background-color: rgba(235, 95, 61,0.8);
-    color:white;
     display: none;    
     text-align: center;
 }
+#swimwear-banners .swimwear-banners-inner .position-absolute h1{
+    font-weight: 200 !important;
+}
 #swimwear-banners .swimwear-banners-inner .position-absolute p{
     letter-spacing: 0.1rem;
+    font-weight: 300 !important;
 }
 hr{
     border: 0.04rem solid white;
+    width: 20%;
 }
 #swimwear-banners .swimwear-banners-inner:hover .position-absolute{
     display: block;
     cursor:pointer;
     transition: 0.5s;
+    animation: text-white-to-black 0.5s ;
 }
 #banner-secondary{
     margin-top: 0.5rem;    
     min-height: 30rem;
-    background-image: url(../img/banner-secundario.png);
+    background-image: url(../img/banners/banner-paralax.jpg);
     background-position: center;
     background-size: cover;
 }
 
-#banner-secondary > .text {   
-    justify-content: flex-end;
+#banner-secondary > .text {     
     min-height: 30rem;
 }
 #box-slides-vitrine{
@@ -282,7 +332,7 @@ hr{
 }
 
 #slides-vitrine .slide{
-    min-height: 10rem;
+    
     background-color: white;
     padding: 0.2rem;
     margin-left: 0.5rem;
@@ -291,12 +341,13 @@ hr{
     line-height: 6px;
     
 }
-#slides-vitrine .slide img{
-    width: 80%;
-    margin: auto;
+#slides-vitrine .slide img{    
+    margin: auto;    
 }
 .slide:hover .btn-comprar{
     display: block;
+    opacity: 1;
+    transition: 0.2s;
 }
 .flexbox-slides{
     justify-content: center;
@@ -304,9 +355,10 @@ hr{
 }
 .vitrine-item-label{
     margin-top: 0.5rem;
+    font-size: 0.8rem;
 }
-.btn-comprar{
-    display: none;
+.btn-comprar{    
+    opacity: 0;
 }
 .vitrine-item-label a{
     border: solid #eb5f3d 1px;
@@ -315,14 +367,34 @@ hr{
     text-decoration: none;
     cursor:pointer;
 }
+.slick-arrow button{
+    
+}
+.slick-prev:before, .slick-next:before {    
+    font-size: 3rem !important;
+    z-index: 2;
+}
+.slick-next {
+    right: -0.1rem !important;
+}
+.slick-prev {
+    left: -1.2rem !important;
+}
 /* content ends */
 
 /* footer starts */
 #blue-grandient{
     background-image: linear-gradient(to top, rgba(116, 202, 195,0.9), rgba(116, 202, 195,0.1));
     color: white;
-    min-height: 42rem;
+    min-height: 38rem;
     font-size: 0.75rem;
+}
+footer hr{
+    border-color: rgba(255,255,255,0.2); 
+    border-width: 0.02rem
+}
+.extrabold{
+    font-weight: 800 !important;
 }
 #footer-mapsite{
     margin-top: 2rem;
@@ -331,6 +403,9 @@ hr{
 }
 #footer-mapsite .fa-instagram{
     font-size: 2rem;
+}
+#footer-mapsite{
+    margin-left: 0px !important;
 }
 footer input{
     height:2rem;
@@ -364,11 +439,132 @@ footer input{
   }
 
   #white-footer-bar{
-    font-size: 0.75rem;
+    font-size: 0.50rem;
     padding-top:0.5rem; 
+    padding-bottom:0.5rem; 
   }
   #white-footer-bar p{
-      margin:0px;
+      margin:1px;
       padding: 0.2rem;
   }
+  
+  footer a{
+      color: white;
+  }
+  footer a:hover{
+    color: white;
+}
+  
 /* footer ends */
+
+#btn-backtop{
+    color: #828282;
+    background-color: white;
+    border-radius: 100%;
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    box-shadow:  0 0 1em #828282;
+    font-size: 0.8rem;
+    
+}
+#btn-backtop i{
+    font-size: 1.2rem;
+}
+#btn-backtop:hover{
+    cursor: pointer;
+}
+
+/**
+ * ----------------------------------------
+ * animations
+ * ----------------------------------------
+ */
+ .scale-in-ver-top {
+	-webkit-animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: scale-in-ver-top 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+.scale-out-ver-top {
+	-webkit-animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+	        animation: scale-out-ver-top 0.2s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+ @-webkit-keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-ver-top {
+    0% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }
+
+  @-webkit-keyframes scale-out-ver-top {
+    0% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }
+  @keyframes scale-out-ver-top {
+    0% {
+      -webkit-transform: scaleY(1);
+              transform: scaleY(1);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scaleY(0);
+              transform: scaleY(0);
+      -webkit-transform-origin: 100% 0%;
+              transform-origin: 100% 0%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-white-to-black {
+    0% {
+      color: white;
+      opacity: 1;
+      
+    }
+    100% {
+      color: black;
+      opacity: 1;
+      
+    }
+  }
